@@ -1,0 +1,185 @@
+/* dashboard.css */
+
+/* Modifikasi agar Tampilan Mirip Gambar */
+/* ------------------------------------ */
+
+/* Ganti skema warna utama */
+h1 {
+    /* Ganti warna h1 menjadi biru (sesuai gambar) */
+    color: #dc0980; 
+    text-align: center;
+    /* Hilangkan margin-bottom jika ada duplikasi */
+}
+
+/* Modifikasi Warna dan Margin h2 */
+h2 {
+    margin-top: 30px; /* Tambahkan margin atas untuk pemisahan */
+    margin-bottom: 10px;
+    color: #333; /* Pertahankan warna gelap untuk subjudul */
+}
+
+/* Penyesuaian Paragraf Awal */
+.intro-paragraph {
+    /* Atur teks agar rata kiri/justify dan tidak terpusat, sesuai gambar */
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+/* Penyesuaian List Materi */
+.materi-list {
+    list-style-type: disc; /* Pastikan menggunakan bullet point */
+    margin-left: 20px;
+}
+
+/* Ganti warna link */
+a {
+    color: #007bff; /* Biru standar untuk link */
+    text-decoration: none;
+}
+
+/* Styling Gambar (Logo UNS) */
+.dashboard-image {
+    max-width: 150px; /* Perkecil ukuran logo agar seperti di gambar */
+    height: auto;
+    border-radius: 0; /* Hapus border-radius jika ada */
+    /* Hapus box-shadow jika ada */
+}
+
+/* Styling Tabel agar sesuai skema warna gambar */
+.schedule-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    /* Hapus box-shadow untuk tampilan sederhana */
+    /* box-shadow: none; */ 
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.schedule-table th,
+.schedule-table td {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    text-align: left; /* Atur teks ke kiri (kecuali jika Anda ingin ditengah) */
+    vertical-align: middle;
+}
+
+.schedule-table thead {
+    background-color: #dc0980; /* Warna Biru untuk Header Tabel (sesuai gambar) */
+    color: white;
+}
+
+.schedule-table th {
+    background-color: #dc0980; /* Pastikan th menggunakan warna biru */
+    color: white;
+    font-weight: bold; /* Tebalkan font header */
+    border: 1px solid #dc0980; /* Border dengan warna yang sama */
+}
+
+/* Hilangkan warna latar belakang baris genap dan hover untuk tampilan sederhana */
+.schedule-table tr:nth-child(even) {
+    background-color: transparent; /* Ubah menjadi transparan */
+}
+
+.schedule-table tr:hover {
+    background-color: transparent; /* Hilangkan efek hover jika tidak diperlukan */
+}
+
+/* Perbaiki display untuk tampilan desktop */
+.schedule-table table, 
+.schedule-table thead, 
+.schedule-table tbody, 
+.schedule-table th, 
+.schedule-table td, 
+.schedule-table tr {
+    display: revert; /* Kembalikan ke default untuk tampilan tabel standar */
+}
+
+/* Styling Form agar sesuai skema warna gambar */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Tambahkan jarak antar elemen */
+    margin: 20px 0;
+    max-width: 100%; /* Biarkan form mengikuti lebar container */
+    padding: 0; /* Hapus padding jika tidak diperlukan */
+    background-color: transparent; /* Hapus background color */
+    box-shadow: none; /* Hapus shadow */
+    align-items: stretch; /* Agar elemen form mengisi lebar container */
+}
+
+/* Input, textarea, dan button */
+.form-section input,
+.form-section textarea,
+.form-section button {
+    width: 100%; 
+    max-width: 100%; /* Biarkan input mengisi lebar container */
+    box-sizing: border-box;
+    margin-bottom: 5px; /* Tambahkan sedikit margin bawah */
+}
+
+/* Style untuk Button Kirim */
+.form-section button {
+    /* Warna tombol: Biru gelap (sesuai gambar) */
+    background-color: #dc0980; 
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: normal; /* Font normal, tidak terlalu tebal */
+    border-radius: 4px; /* Sudut sedikit lebih tegas */
+    margin-top: 10px; /* Jarak dari elemen di atasnya */
+}
+
+.form-section button:hover {
+    background-color: #dc0980;
+    transform: none; /* Hapus efek transform */
+}
+
+
+/* Penambahan untuk Responsif dan Posisi Tengah */
+/* ------------------------------------------ */
+
+.dashboard-container {
+    /* Menjamin container berada di tengah secara horizontal */
+    margin: 0 auto; 
+    /* Menentukan lebar maksimum agar konten tidak terlalu melebar di layar besar */
+    max-width: 900px; 
+    /* Menambahkan padding di sisi kiri/kanan agar konten tidak menempel di tepi layar kecil */
+    padding: 20px; 
+}
+
+/* Penyesuaian untuk tampilan tabel agar rata tengah di dalam container */
+.table-section {
+    width: 100%;
+    margin: 20px auto; /* Tambahkan margin auto untuk menengahkan jika table-section memiliki max-width */
+}
+
+/* Penyesuaian untuk form agar rata tengah di dalam container */
+.form-section {
+    /* Pastikan form section juga rata tengah, meskipun sudah 100% width */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px; /* Jika ingin form lebih kecil dari 100% */
+}
+
+/* Memastikan konten teks (paragraf dan list) tetap rata kiri (sesuai gambar) */
+p, ul, h2 {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Untuk gambar/logo (memastikan gambar di tengah) */
+.image-section {
+    display: flex;
+    justify-content: center; /* Memastikan konten di dalamnya (logo) berada di tengah */
+    margin: 20px 0;
+}
+
+/* Memperbaiki properti yang hilang (jika Anda menghapusnya di script awal) */
+body {
+    /* Pastikan tidak ada margin default yang mengganggu penengahan */
+    margin: 0;
+    padding: 0;
+}
