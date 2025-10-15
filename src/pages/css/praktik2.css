@@ -1,4 +1,5 @@
 /* Container utama */
+
 .praktik-container {
     display: flex;
     flex-direction: column;
@@ -84,4 +85,56 @@
     margin-bottom: 10px;
     width: 80px;
     height: 80px;
+}
+
+/* ============================= */
+/* 🔹 Tambahan styling spesifik 🔹 */
+/* ============================= */
+
+/* Tombol 'Tambah' - biru */
+.section button:nth-of-type(1) {
+    background-color: #3e5cb3;
+}
+
+.section button:nth-of-type(1):hover {
+    background-color: #2c4380;
+}
+
+/* Tombol 'Kurangi' - oranye */
+.section button:nth-of-type(2).danger {
+    background-color: #f39c12;
+}
+
+.section button:nth-of-type(2).danger:hover {
+    background-color: #d68910;
+}
+
+/* Tombol 'Tampilkan Hasil' - biru */
+.section button:nth-of-type(2):not(.danger) {
+    background-color: #3e5cb3;
+}
+
+.section button:nth-of-type(2):not(.danger):hover {
+    background-color: #2c4380;
+}
+
+/* Tombol 'Ambil Data User Acak' - biru dan berada di atas user */
+.section:last-of-type button.btn {
+    order: -1; /* hanya tombol di section terakhir (user) yang di atas */
+    background-color: #3e5cb3;
+    color: #ffffff; /* pastikan teks putih */
+}
+
+.section:last-of-type button.btn:hover {
+    background-color: #2c4380;
+}
+
+/* Tambahan: pastikan semua teks tombol putih */
+.btn, .btn * {
+    color: #ffffff !important;
+}
+
+/* Tambahan: warna judul utama (h1) di container utama biru */
+.praktik-container > h1 {
+    color: #3e5cb3;
 }
